@@ -49,6 +49,3 @@ FastPrompt/
 ├── LICENSE
 └── .gitignore
 ```
-
-## 📄 许可证
-MIT ©邓磊
