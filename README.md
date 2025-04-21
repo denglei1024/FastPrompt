@@ -22,7 +22,7 @@
 1. 克隆仓库：
 
 ```powershell
-git clone https://github.com/your-username/FastPrompt.git
+git clone https://github.com/denglei1024/FastPrompt.git
 ```
 2. 手动导入模板
 
