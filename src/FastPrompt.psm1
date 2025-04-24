@@ -18,7 +18,7 @@ function Get-GitInfo {
             }
         }
 
-        $gitInfo = "`e[95m $branch`e[0m"
+        $gitInfo = "`e[36m $branch`e[0m"
         if ($ahead -gt 0)  { $gitInfo += " `e[93m⇡$ahead`e[0m" }
         if ($behind -gt 0) { $gitInfo += " `e[91m⇣$behind`e[0m" }
         if ($dirty)        { $gitInfo += " `e[91m✗`e[0m" }
@@ -28,11 +28,11 @@ function Get-GitInfo {
 }
 
 function Get-UserHost {
-    return "`e[32m$env:USERNAME`e[0m@`e[36m$env:COMPUTERNAME`e[0m"
+    return "`e[32m$env:USERNAME`e[32m@`e[32m$env:COMPUTERNAME`e[0m"
 }
 
 function Get-Path {
-    return "`e[34m$((Get-Location).Path.Replace($HOME, "~"))`e[0m"
+    return "`e[33m$((Get-Location).Path.Replace($HOME, "~"))`e[0m"
 }
 
 function Get-PromptChar {
@@ -41,7 +41,7 @@ function Get-PromptChar {
 
 function global:Prompt {
     $userHost = Get-UserHost
-    $mingw = "`e[33mMINGW64`e[0m"
+    $mingw = "`e[35mMINGW64`e[0m"
     $path = Get-Path
     $git = Get-GitInfo
     $promptChar = Get-PromptChar
